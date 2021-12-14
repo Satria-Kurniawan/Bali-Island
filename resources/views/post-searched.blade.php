@@ -9,7 +9,7 @@
             <div class="card-transparent mt-2 mb-2 border-bottom">
                 <div class="row">
                     <div class="col-auto pb-2">
-                        <img src="{{ asset('storage/' . $item->image) }}" style="height: 150px" width="150px">
+                        <img src="{{ asset('images/' . $item->image) }}" style="height: 150px" width="150px">
                     </div>
                     <div class="col">
                         <div class="px-1">

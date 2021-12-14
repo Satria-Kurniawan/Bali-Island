@@ -40,7 +40,7 @@ Route::group(['middleware' => [
     Route::get('/edit-postingan/{id}', [PostController::class, 'edit'])->name('editPost');
     Route::post('/update-postingan/{id}', [PostController::class, 'update'])->name('updatePost');
 
-    Route::get('/postingan/pencarian', [PostController::class, 'searchDataPost'])->name('searchDataPost');
+    Route::get('/pencarian-data', [PostController::class, 'searchDataPost'])->name('searchDataPost');
 });
 
 Auth::routes();

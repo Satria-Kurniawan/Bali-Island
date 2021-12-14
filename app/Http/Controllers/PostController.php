@@ -56,15 +56,18 @@ class PostController extends Controller
             'date' => 'required',
         ]);
 
+        $file = $request->image;
         $file_name = $request->image->getClientOriginalName();
-        $image = $request->image->storeAs('images', $file_name);
+        $file->move(public_path('images'), $file_name);
+        // $file_name = $request->image->getClientOriginalName();
+        // $image = $request->image->storeAs('images', $file_name);
 
         Post::create([
             'id' => $request->id,
             'title' => $request->title,
             'description' => $request->description,
             'location' => $request->location,
-            'image' => $image,
+            'image' => $file_name,
             'date' => $request->date,
             'category_id' => $request->category_id
         ]);
@@ -119,9 +122,12 @@ class PostController extends Controller
         $post_data->description = $request->input('description');
         $post_data->location = $request->input('location');
         if ($request->has('image')) {
+            $file = $request->image;
             $file_name = $request->image->getClientOriginalName();
-            $image = $request->image->storeAs('images', $file_name);
-            $post_data->image = $image;
+            $file->move(public_path('images'), $file_name);
+            // $file_name = $request->image->getClientOriginalName();
+            // $image = $request->image->storeAs('images', $file_name);
+            $post_data->image = $file_name;
         }
         $post_data->date = $request->input('date');
         $post_data->category_id = $request->input('category_id');

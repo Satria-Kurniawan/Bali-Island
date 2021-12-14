@@ -16,7 +16,7 @@
             </div>
             <div class="card-body p-3">
                 <div class="img-gradient img-effect">
-                    <img src="{{ asset('storage/' . $item->image) }}" style="height: 200px; width: 100%">
+                    <img src="{{ asset('images/' . $item->image) }}" style="height: 200px; width: 100%">
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="carousel-inner">
             @foreach($post_data as $key => $slider)
             <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                <img src="{{ asset('storage/' . $slider->image) }}" class="" alt="..." width="700px" height="450px">
+                <img src="{{ asset('images/' . $slider->image) }}" class="" alt="..." width="700px" height="450px">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{ $slider->title }}</h5>
                 </div>

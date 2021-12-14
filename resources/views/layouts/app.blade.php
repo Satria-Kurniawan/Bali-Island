@@ -140,16 +140,16 @@
                         <i class="fas fa-search text-pink"></i>
                     </a>
                     <div class="navbar-search-block">
-                        <form class="form-inline" method="GET" action="{{ url('/postingan/pencarian') }}">
-                            <div class="input-group input-group-sm">
+                        <form class="form-inline" method="GET" action="{{ url('/pencarian-data') }}">
+                            <div class="input-group input-group-sm bg-white">
                                 <input class="form-control form-control-navbar" name="kueri" type="search"
                                     placeholder="Search" aria-label="Search">
                                 <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit">
-                                        <i class="fas fa-search text-blue"></i>
+                                    <button class="btn btn-outline-primary" type="submit">
+                                        <i class="fas fa-search"></i>
                                     </button>
-                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                        <i class="fas fa-times text-pink"></i>
+                                    <button class="btn btn-outline-danger" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
                                     </button>
                                 </div>
                             </div>

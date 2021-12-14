@@ -63,7 +63,7 @@
             <div class="col-md-12">
                 <div class="card rounded-0">
                     <div class="card-body">
-                        <table class="table table-hover text-center">
+                        <table class="table table-hover table-responsive text-center">
                             <caption>List posts</caption>
                             <thead>
                                 <tr>
@@ -85,7 +85,7 @@
                                         <td>{{ Illuminate\Support\Str::limit($item->location, 40) }}</td>
                                         <td>
                                             @if (!empty($item->image))
-                                                <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid">
+                                                <img src="{{ asset('images/' . $item->image) }}" class="img-fluid">
                                             @else
                                                 No image available
                                             @endif

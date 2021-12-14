@@ -11,7 +11,7 @@
                     @foreach ($post_1 as $item)
                     <a href="konten-postingan/{{ $item->id }}" class="text-dark">
                         <div class="img-gradient img-effect">
-                            <img src="{{ asset('storage/' . $item->image) }}" style="height: 420px; width: 100%">
+                            <img src="{{ asset('images/' . $item->image) }}" style="height: 420px; width: 100%">
                         </div>
                         <div class="bottom-left img-effect">
                             <a href="konten-postingan/{{ $item->id }}" class="text-white">
@@ -36,8 +36,8 @@
                 <div class="card-body p-0">
                     @foreach ($post_2 as $item)
                     <a href="konten-postingan/{{ $item->id }}" class="text-dark">
-                        <div class="img-gradient img-effect">
-                            <img src="{{ asset('storage/' . $item->image) }}" style="height: 207px; width: 365px;"
+                        <div class="img-gradient img-effect img-fluid w-100">
+                            <img src="{{ asset('images/' . $item->image) }}" style="height: 207px;"
                                 class="card-img-bottom embed-responsive-item">
                         </div>
                         <div class="bottom-left img-effect">
@@ -61,8 +61,8 @@
                 <div class="card-body p-0">
                     @foreach ($post_3 as $item)
                     <a href="konten-postingan/{{ $item->id }}" class="text-dark">
-                        <div class="img-gradient img-effect">
-                            <img src="{{ asset('storage/' . $item->image) }}" style="height: 207px; width: 365px;">
+                        <div class="img-gradient img-effect img-fluid w-100">
+                            <img src="{{ asset('images/' . $item->image) }}" style="height: 207px; width: 100%">
                         </div>
                         <div class="bottom-left img-effect">
                             <a href="konten-postingan/{{ $item->id }}" class="text-white">
@@ -93,7 +93,7 @@
             <div class="card rounded-0 mr-3 float-left shadow" style="width: 20rem; margin-bottom: 100px">
                 <div class="img-gradient img-effect">
                     @if (!empty($item->image))
-                    <img src="{{ asset('storage/' . $item->image) }}" style="height: 200px" width="100%">
+                    <img src="{{ asset('images/' . $item->image) }}" style="height: 200px" width="100%">
                     @else
                     No image available
                     @endif

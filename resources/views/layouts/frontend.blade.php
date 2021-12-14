@@ -152,7 +152,7 @@
                             <a class="dropdown-item {{ Route::is('aboutMe') ? 'active' : '' }} text-white"
                                 href="{{ route('aboutMe') }}">About Me</a>
                             <a class="dropdown-item"
-                                href="{{ url('https://yaarestaurant.azurewebsites.net') }} text-white">
+                                href="{{ url('https://yaarestaurant.azurewebsites.net') }}">
                                 Restaurant
                             </a>
                         </div>
@@ -252,7 +252,7 @@
     <div class="container-fluid bg-light">
         <div class="row p-3">
             <div class="col-3">
-                <img src="{{ url("../storage/images/Brand-Logo.png") }}" style="height: 150px">
+                <img src="{{ url("../images/Brand-Logo.png") }}" class="w-100">
             </div>
             <div class="col-3">
                 <ul style="list-style-type: none" class="ml-0">
